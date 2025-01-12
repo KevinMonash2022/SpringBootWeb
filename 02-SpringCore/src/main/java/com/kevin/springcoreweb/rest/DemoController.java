@@ -12,15 +12,16 @@ public class DemoController {
     // Define a private field for the dependency
     private Coach myCoach;
 
-//    @Autowired
-//    public DemoController(@Qualifier("tennisCoach") Coach theCoach){
-//        myCoach = theCoach;
-//    }
-
     @Autowired
-    public DemoController(Coach theCoach){
+    public DemoController(@Qualifier("cricketCoach") Coach theCoach){
+        System.out.println("In constructor: " + getClass().getSimpleName());
         myCoach = theCoach;
     }
+
+//    @Autowired
+//    public DemoController(Coach theCoach){
+//        myCoach = theCoach;
+//    }
 
 //    // Define a constructor for dependency injection
 //    @Autowired
