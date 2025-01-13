@@ -18,8 +18,24 @@ public class CurdApplication {
 	public CommandLineRunner commandLineRunner(StudentDAO studentDAO) {
 		return runner -> {
 //			System.out.println("Hello world");
-			createStudent(studentDAO);
+			// createStudent(studentDAO);
+			createMultipleStudents(studentDAO);
 		};
+	}
+
+	private void createMultipleStudents(StudentDAO studentDAO) {
+		// Create multiple students
+		System.out.println("Creating 3 students object ...");
+		Student tempStudent01 = new Student("Kaixin", "Zhang", "kaixin2022mel@gmail.com");
+		Student tempStudent02 = new Student("Kevin", "Zhang", "iwantajob@gmail.com");
+		Student tempStudent03 = new Student("K", "Zhang", "fullstack@gmail.com");
+
+		// Save the student objects
+		System.out.println("Saving the students ...");
+		studentDAO.save(tempStudent01);
+		studentDAO.save(tempStudent02);
+		studentDAO.save(tempStudent03);
+
 	}
 
 	private void createStudent(StudentDAO studentDAO) {
