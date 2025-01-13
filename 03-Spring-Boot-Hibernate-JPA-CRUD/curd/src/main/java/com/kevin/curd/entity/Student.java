@@ -22,6 +22,8 @@ public class Student {
 
 
     // Define constructors
+    public Student() {
+    }
 
     public Student(String firstrname, String lastrname, String email) {
         this.firstrname = firstrname;
