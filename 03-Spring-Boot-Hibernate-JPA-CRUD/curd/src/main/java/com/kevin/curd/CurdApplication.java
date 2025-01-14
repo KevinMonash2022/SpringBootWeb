@@ -23,7 +23,7 @@ public class CurdApplication {
 
 			// createStudent(studentDAO);
 
-			// createMultipleStudents(studentDAO);
+			createMultipleStudents(studentDAO);
 
 			// readStudent(studentDAO);
 
@@ -35,7 +35,7 @@ public class CurdApplication {
 
 			// deleteStudent(studentDAO);
 
-			deleteAllStudent(studentDAO);
+			// deleteAllStudent(studentDAO);
 		};
 	}
 
